@@ -83,7 +83,7 @@
 \newcommand{\notsubset}{\not\subset}
 % \newcommand{\right)}{\mathbb{R}^{+}}
 \newcommand{\Dn}{\Delta^{n}}
-\newcommand{\C}{\mathbb{C}}
+\newcommand{\C}{\C}
 \newcommand{\primeDec}{p_1^{\alpha_1}p_2^{\alpha_2}\cdots p_m^{\alpha_m}p_{m+1}^{\alpha_{m+1}}}
 \newcommand{\abs}[1]{\left\vert#1\right\vert}
 \newcommand{\norm}[1]{\left\vert\left\vert#1\right\vert\right\vert}
@@ -175,24 +175,24 @@ root of $a$ is a number
 \[\left|a\right|^{\frac{1}{n}}\text{cis}\left( \frac{1}{n}\left( \alpha+2\pi k\right)\right)\]
 where $0\leq k \leq n-1$
 }
-\boxset{Lines in $\mathbb{C}$}
+\boxset{Lines in $\C$}
 {A line in $\C$ is of the form
 \[L=\left\{z: \operatorname{Im}\left(\frac{z-a}{b}\right)=0\right\}\]
 }
-\boxset{Half planes in $\mathbb{C}$}
+\boxset{Half planes in $\C$}
 {we are "walking along $L$ in the direction of $b$." If we put
 \[H_{a}=\left\{z: \operatorname{Im}\left(\frac{z-a}{b}\right)>0\right\}\]
 then it is easy to see that $H_{a}=a+H_{0} \equiv\left\{a+w: w \in H_{0}\right\}$; that is, $H_{a}$ is the translation of $H_{0}$ by $a$. Hence, $H_{a}$ is the half plane lying to the left of $L$. Similarly,
 \[K_{a}=\left\{z: \operatorname{Im}\left(\frac{z-a}{b}\right)<0\right\}\]
 is the half plane on the right of $L$.}
-\boxset{The triangle inequality in $\mathbb{C}$}
-{\[|z+w| \leq|z|+|w|(z, w \in \mathbb{C})\]
+\boxset{The triangle inequality in $\C$}
+{\[|z+w| \leq|z|+|w|(z, w \in \C)\]
 where
 \[|z|=\left(x^{2}+y^{2}\right)^{\frac{1}{2}}\]
 }
 \boxset{The Weierstrass $M$-test for series of functions}
 {
- Let $u_{n}: X \rightarrow \mathbb{C}$ be a function such that $\left|u_{n}(x)\right| \leq M_{n}$ for every $x$ in $X$ and suppose the constants satisfy $\sum_{n=1}^{\infty} M_{n}<\infty$. Then $\sum_{1}^{\infty} u_{n}$ is uniformly convergent.
+ Let $u_{n}: X \rightarrow \C$ be a function such that $\left|u_{n}(x)\right| \leq M_{n}$ for every $x$ in $X$ and suppose the constants satisfy $\sum_{n=1}^{\infty} M_{n}<\infty$. Then $\sum_{1}^{\infty} u_{n}$ is uniformly convergent.
 }
 \boxset{The Heine-Borel Theorem}
 {A subset $K$ of $\R^n$, $n\geq 1$ is compact iff $K$ is closed and bounded.}
@@ -203,16 +203,16 @@ where
 \boxset{The Intermediate Value Theorem}
 {If $f:[a, b] \rightarrow \mathbb{R}$ is continuous and $f(a) \leq \xi$ $\leq f(b)$ then there is a point $x, a \leq x \leq b$, with $f(x)=\xi$.}
 \boxset{Morera's Theorem}
-{ Let $G$ be a region and let $f: G \rightarrow \mathbb{C}$ be a continuous function such that $\int_{T} f=0$ for every triangular path $T$ in $G$; then $f$ is analytic in $G$.}
+{ Let $G$ be a region and let $f: G \rightarrow \C$ be a continuous function such that $\int_{T} f=0$ for every triangular path $T$ in $G$; then $f$ is analytic in $G$.}
 \boxset{Cauchy's Theorem (Second Version)}
-{If $f: G \rightarrow \mathbb{C}$ is an analytic function and $\gamma$ is a closed rectifiable curve in $G$ such that $\gamma \sim 0$, then
+{If $f: G \rightarrow \C$ is an analytic function and $\gamma$ is a closed rectifiable curve in $G$ such that $\gamma \sim 0$, then
 \[\int_{\gamma} f=0 \text {. }\]}
 \boxset{Cauchy's Theorem (Fourth Version)}
 {If $G$ is simply connected then i $f=0$ for every closed rectifiable curve and every analytic function $f$.}
 \boxset{Open Mapping Theorem}
 {Let $G$ be a region and suppose that $f$ is a non constant analytic function on $G$. Then for any open set $U$ in $G, f(U)$ is open.}
 \boxset{Goursat's Theorem}
-{Let $G$ be an open set and let $f: G \rightarrow \mathbb{C}$ be a differentiable function; then $f$ is analytic on $G$.}
+{Let $G$ be an open set and let $f: G \rightarrow \C$ be a differentiable function; then $f$ is analytic on $G$.}
 \boxset{Laurent series development of an analytic function in an annulus}
 {Let $f$ be analytic in the annulus ann $\left(a ; R_{1}\right.$, $R_{2}$ ). Then
 \[f(z)=\sum_{n=-\infty}^{\infty} a_{n}(z-a)^{n}\]
@@ -244,18 +244,18 @@ on $\gamma$, then
 \boxset{Uniform convergence}
 {Let $X$ be a set and $(\Omega, \rho)$ a metric space and suppose $f, f_{1}, f_{2}, \ldots$ are functions from $X$ into $\Omega$. The sequence $\left\{f_{n}\right\}$ converges uniformly to $f$-written $f=u-\lim f_{n}$-if for every $\epsilon>0$ there is an integer $N$ (depending on $\epsilon$ alone) such that $\rho\left(f(x), f_{n}(x)\right)<\epsilon$ for all $x$ in $X$, whenever $n \geq N$. Hence, whenever $n \geq N$.}
 \boxset{Analytic function}
-{ A function $f: G \rightarrow \mathbb{C}$ is analytic if $f$ is continuously differentiable on $G$.}
+{ A function $f: G \rightarrow \C$ is analytic if $f$ is continuously differentiable on $G$.}
 \boxset{Principal branch of the logarithm}
-{ If $G$ is an open connected set in $\mathbb{C}$ and $f: G \rightarrow \mathbb{C}$ is a continuous function such that $z=\exp f(z)$ for all $z$ in $G$ then $f$ is a branch of the logarithm.
-We designate the particular branch of the logarithm defined above on $\mathbb{C}-\{z: z \leq 0\}$ to be the principal branch of the logarithm.}
+{ If $G$ is an open connected set in $\C$ and $f: G \rightarrow \C$ is a continuous function such that $z=\exp f(z)$ for all $z$ in $G$ then $f$ is a branch of the logarithm.
+We designate the particular branch of the logarithm defined above on $\C-\{z: z \leq 0\}$ to be the principal branch of the logarithm.}
 \boxset{Definition of Möbius map}
 { A mapping of the form $S(z)=\frac{a z+b}{c z+d}$ is called a linear fractional transformation. If $a, b, c$, and $d$ also satisfy $a d-b c \neq 0$ then $S(z)$ is called a Möbius transformation.}
 \boxset{Symmetry Principle}
 { If a Möbius transformation $T$ takes a circle $\Gamma_{1}$ onto the circle $\Gamma_{2}$ then any pair of points symmetric with respect to $\Gamma_{1}$ are mapped by $T$ onto a pair of points symmetric with respect to $\Gamma_{2}$.}
 \boxset{Orientation Principle}
-{ Let $\Gamma_{1}$ and $\Gamma_{2}$ be two circles in $\mathbb{C}_{\infty}$ and let $T$ be a Möbius transformation such that $T\left(\Gamma_{1}\right)=\Gamma_{2}$. Let $\left(z_{1}, z_{2}, z_{3}\right)$ be an orientation for $\Gamma_{1}$. Then $T$ takes the right side and the left side of $\Gamma_{1}$ onto the right side and left side of $\Gamma_{2}$ with respect to the orientation $\left(T z_{1}, T z_{2}, T z_{3}\right)$.}
+{ Let $\Gamma_{1}$ and $\Gamma_{2}$ be two circles in $\C_{\infty}$ and let $T$ be a Möbius transformation such that $T\left(\Gamma_{1}\right)=\Gamma_{2}$. Let $\left(z_{1}, z_{2}, z_{3}\right)$ be an orientation for $\Gamma_{1}$. Then $T$ takes the right side and the left side of $\Gamma_{1}$ onto the right side and left side of $\Gamma_{2}$ with respect to the orientation $\left(T z_{1}, T z_{2}, T z_{3}\right)$.}
 \boxset{Riemann-Stieltjes integral}
-{ Let $\gamma:[a, b] \rightarrow \mathbb{C}$ be of bounded variation and suppose that $f:[a, b] \rightarrow \mathbb{C}$ is continuous. Then there is a complex number I such that for every $\epsilon>0$ there is a $\delta>0$ such that when $P=\left\{t_{0}<t_{1}<\ldots<t_{m}\right\}$ is a partition of $[a, b]$ with $\|P\|=\max \left\{\left(t_{k}-t_{k-1}\right): 1 \leq k \leq m\right\}<\delta$ then
+{ Let $\gamma:[a, b] \rightarrow \C$ be of bounded variation and suppose that $f:[a, b] \rightarrow \C$ is continuous. Then there is a complex number I such that for every $\epsilon>0$ there is a $\delta>0$ such that when $P=\left\{t_{0}<t_{1}<\ldots<t_{m}\right\}$ is a partition of $[a, b]$ with $\|P\|=\max \left\{\left(t_{k}-t_{k-1}\right): 1 \leq k \leq m\right\}<\delta$ then
 for whatever choice of points $\tau_{k}, t_{k-1} \leq \tau_{k} \leq t_{k}$.
 This number $I$ is called the integral of $f$ with respect to $\gamma$ over $[a, b]$ and is designated by
 \[I=\int_{a}^{b} f d \gamma=\int_{a}^{b} f(t) d \gamma(t) .\]
@@ -269,18 +269,18 @@ This number $I$ is called the integral of $f$ with respect to $\gamma$ over $[a,
 \boxset{Fundamental Theorem of Algebra}
 { If $p(z)$ is a non constant polynomial then there is a complex number a with $p(a)=0$.}
 \boxset{Maximum Modulus Theorem}
-{ If $G$ is a region and $f: G \rightarrow \mathbb{C}$ is an analytic function such that there is a point $a$ in $G$ with $|f(a)| \geq|f(z)|$ for all $z$ in $G$, then $f$ is constant.}
-\boxset{Index of a closed rectifiable curve $\gamma$ in $\mathbb{C}$ with respect to a point $a \notin \gamma$}
-{ If $\gamma$ is a closed rectifiable curve in $\mathbb{C}$ then for $a \notin\{\gamma\}$
+{ If $G$ is a region and $f: G \rightarrow \C$ is an analytic function such that there is a point $a$ in $G$ with $|f(a)| \geq|f(z)|$ for all $z$ in $G$, then $f$ is constant.}
+\boxset{Index of a closed rectifiable curve $\gamma$ in $\C$ with respect to a point $a \notin \gamma$}
+{ If $\gamma$ is a closed rectifiable curve in $\C$ then for $a \notin\{\gamma\}$
 \[n(\gamma ; a)=\frac{1}{2 \pi i} \int_{\gamma}(z-a)^{-1} d z\]
 
 is called the index of $\gamma$ with respect to the point $a$. It is also sometimes called the winding number of $\gamma$ around $a$.}
 \boxset{When is an open set simply connected?}
 { An open set $G$ is simply connected if $G$ is connected and every closed curve in $G$ is homotopic to zero.}
 \boxset{A rectifiable curve homologous to zero}
-{ If $G$ is an open set then $\gamma$ is homologous to zero, in symbols $\gamma \approx 0$, if $n(\gamma ; w)=0$ for all $w$ in $\mathbb{C}-G$.}
+{ If $G$ is an open set then $\gamma$ is homologous to zero, in symbols $\gamma \approx 0$, if $n(\gamma ; w)=0$ for all $w$ in $\C-G$.}
 \boxset{Removable singularity of an analytic function at a point $z=a$}
-{ A function $f$ has an isolated singularity at $z=a$ if there is an $R>0$ such that $f$ is defined and analytic in $B(a ; R)-\{a\}$ but not in $B(a ; R)$. The point $a$ is called a removable singularity if there is an analytic function $g: B(a ; R) \rightarrow \mathbb{C}$ such that $g(z)=f(z)$ for $0<|z-a|<R$.}
+{ A function $f$ has an isolated singularity at $z=a$ if there is an $R>0$ such that $f$ is defined and analytic in $B(a ; R)-\{a\}$ but not in $B(a ; R)$. The point $a$ is called a removable singularity if there is an analytic function $g: B(a ; R) \rightarrow \C$ such that $g(z)=f(z)$ for $0<|z-a|<R$.}
 \boxset{Pole of a function}
 {If $z=a$ is an isolated singularity of $f$ then $a$ is a pole of $f$ if $\lim _{z \rightarrow a}|f(z)|=\infty$. That is, for any $M>0$ there is a number $\epsilon>0$ such that $|f(z)| \geq M$ whenever $0<|z-a|<\epsilon$. If an isolated singularity is neither a pole nor a removable singularity it is called an essential singularity.}
 \end{document}

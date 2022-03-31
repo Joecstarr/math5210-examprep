@@ -4,23 +4,17 @@ import html
 preamble = r"""
 
 <script>
+var ua = navigator.userAgent.toLowerCase();
+var isAndroid = ua.indexOf("android") > -1;
+if(isAndroid == false)
+{
 var els = document.querySelectorAll("a[href='https://ankiweb.net/']");
 var length = els.length;
 if (length == 0) {
-  const jaxVer = MathJax.version.split('.')[0];
-  if (jaxVer === '3') {
     MathJax.config.tex['extensions'] = ["AMSmath.js", "AMSsymbols.js", "AMScd.js"];
     MathJax.config.tex['processEscapes'] = true;
     MathJax.config.tex['processEnvironments'] = true;
     MathJax.startup.getComponents();
-  } else if (jaxVer === '2') {
-    MathJax.Hub.Config({
-      TeX: {
-        extensions: ["AMSmath.js", "AMSsymbols.js", "AMScd.js"]
-      },
-    });
-    MathJax.Hub.Configured();
-  }
 }
 else {
   MathJax = {
@@ -39,7 +33,7 @@ else {
   script.type = 'text/javascript';
   script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
   document.body.appendChild(script);
-}
+}}
 </script>
 
 <div style="display: none;">
