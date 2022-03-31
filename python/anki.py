@@ -1,13 +1,5 @@
-from pathlib import Path
-from os import name
-from attr import validate
 import genanki
-import json
 import re
-from markdown_it import MarkdownIt
-# from mdplug import math_tag_plugin,math_defintion_plugin
-from mdit_py_plugins.front_matter import front_matter_plugin
-from mdit_py_plugins.footnote import footnote_plugin
 
 def_model = genanki.Model(
   1607392319,
