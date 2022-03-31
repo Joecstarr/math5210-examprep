@@ -48,18 +48,16 @@ def_model = genanki.Model(
 """+"{{Defintion}}",
     },
   ])
-# marker the marker character to use
+
 def_deck = genanki.Deck(
   2059400110,
   'prepsheet')
 def_deck.add_model(def_model)
 
 
-# validate func(marker, param) -> bool, default matches against the name
 reg = r"\\boxset\{(.*)?\}\n\{([\w\W]*?)\}\n"
 
-# render render func
-with open("prepsheet.tex") as file: # Use file to refer to the file object
+with open("prepsheet.tex") as file:
 
   data = file.read()
 
