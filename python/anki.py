@@ -1,25 +1,51 @@
 import genanki
 import re
-
-def_model = genanki.Model(
-  1607392319,
-  'Math model',
-  fields=[
-    {'name': 'Name'},
-    {'name': 'Defintion'},
-  ],
-  templates=[
-    {
-      'name': 'Defintion',
-      'qfmt': '{{Name}}',
-      'afmt': "{{FrontSide}}"+r"""
+import html
+preamble = r"""
 
 <script>
-  MathJax.config.tex['extensions'] = ["AMSmath.js", "AMSsymbols.js","AMScd.js"];
+var els = document.querySelectorAll("a[href='https://ankiweb.net/']");
+var length = els.length;
+if (length == 0) {
+  const jaxVer = MathJax.version.split('.')[0];
+  if (jaxVer === '3') {
+    MathJax.config.tex['extensions'] = ["AMSmath.js", "AMSsymbols.js", "AMScd.js"];
+    MathJax.config.tex['processEscapes'] = true;
+    MathJax.config.tex['processEnvironments'] = true;
+    MathJax.startup.getComponents();
+  } else if (jaxVer === '2') {
+    MathJax.Hub.Config({
+      TeX: {
+        extensions: ["AMSmath.js", "AMSsymbols.js", "AMScd.js"]
+      },
+    });
+    MathJax.Hub.Configured();
+  }
+}
+else {
+  MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      extensions: ["AMSmath.js", "AMSsymbols.js", "AMScd.js"],
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+  document.body.appendChild(script);
+}
 </script>
-<hr id="answer"><div>
+
+<div style="display: none;">
 
 \(\newcommand{\N}{\mathbb{N}}\)
+\(\newcommand{\C}{\mathbb{C}}\)
 \(\newcommand{\Z}{\mathbb{Z}}\)
 \(\newcommand{\Q}{\mathbb{Q}}\)
 \(\newcommand{\R}{\mathbb{R}}\)
@@ -45,7 +71,19 @@ def_model = genanki.Model(
 \(\newcommand{\bd}{\operatorname{bd}}\)
 \(\renewcommand{\bar}[1]{\overline{#1}}\)
 </div>
-"""+"{{Defintion}}",
+"""
+def_model = genanki.Model(
+  1607392319,
+  'Math model',
+  fields=[
+    {'name': 'Name'},
+    {'name': 'Defintion'},
+  ],
+  templates=[
+    {
+      'name': 'Defintion',
+      'qfmt': preamble+"{{Name}}",
+      'afmt': preamble+"<p>{{FrontSide}}</p><hr id=\"answer\"><br><br><p>{{Defintion}}</p>",
     },
   ])
 
@@ -63,11 +101,11 @@ with open("prepsheet.tex") as file:
 
   finds = re.findall( reg, data)
   for find in finds:
-    name      = re.sub(r"\$(.*?)\$",r"\(\1\)",find[0])
-    defintion = re.sub(r"\$(.*?)\$",r"\(\1\)",find[1])
+    name = html.escape(re.sub(r"\$(.*?)\$",r"\(\1\)",find[0]))
+    defintion = html.escape(re.sub(r"\$(.*?)\$",r"\(\1\)",find[1]))
     my_note = genanki.Note(
               model=def_model,
               fields=[name, defintion],
-              guid=f"prepsheet.tex-{find[0]}")
+              guid=f"prepsheet.tex-{name}")
     def_deck.add_note(my_note)
   genanki.Package(def_deck).write_to_file('prepsheet.apkg')
