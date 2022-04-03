@@ -165,7 +165,7 @@
 \newpage
 \boxset{The Polar representation and roots of complex numbers}
 {Given a point $z=x+yi$ in the complex plane. The point has a polar
-representation $\left( r,\ \theta\right):\ x=r\cos{\theta},\ y$, where $r=\left|z\right|$
+representation $\left( r,\ \theta\right):\ x=r\cos{\theta},\ y=r\sin{\theta}$, where $r=\left|z\right|$
 and $\theta$ is the angle between the positive real axis and the line
 segment from $0$ to $z$.}
 \boxset{Roots of complex numbers}
@@ -180,13 +180,13 @@ where $0\leq k \leq n-1$
 \[L=\left\{z: \operatorname{Im}\left(\frac{z-a}{b}\right)=0\right\}\]
 }
 \boxset{Half planes in $\C$}
-{we are "walking along $L$ in the direction of $b$." If we put
+{We are "walking along $L$ in the direction of $b$." If we put
 \[H_{a}=\left\{z: \operatorname{Im}\left(\frac{z-a}{b}\right)>0\right\}\]
 then it is easy to see that $H_{a}=a+H_{0} \equiv\left\{a+w: w \in H_{0}\right\}$; that is, $H_{a}$ is the translation of $H_{0}$ by $a$. Hence, $H_{a}$ is the half plane lying to the left of $L$. Similarly,
 \[K_{a}=\left\{z: \operatorname{Im}\left(\frac{z-a}{b}\right)<0\right\}\]
 is the half plane on the right of $L$.}
 \boxset{The triangle inequality in $\C$}
-{\[|z+w| \leq|z|+|w|(z, w \in \C)\]
+{\[|z+w| \leq|z|+|w|,\;(z, w \in \C)\]
 where
 \[|z|=\left(x^{2}+y^{2}\right)^{\frac{1}{2}}\]
 }
@@ -197,7 +197,7 @@ where
 \boxset{The Heine-Borel Theorem}
 {A subset $K$ of $\R^n$, $n\geq 1$ is compact iff $K$ is closed and bounded.}
 \boxset{The Cantor Intersection Theorem}
-{The Cantor Intersection Theorem Let $X$ be a metric space. Then $X$ is complete if and only if whenever $\left\{F_{n}\right\}_{n=1}^{\infty}$ is a contracting sequence of nonempty closed subsets of $X$, there is a point $x \in X$ for which $\bigcap_{n=1}^{\infty} F_{n}=\{x\}$}
+{Let $X$ be a metric space. Then $X$ is complete if and only if whenever $\left\{F_{n}\right\}_{n=1}^{\infty}$ is a contracting sequence of nonempty closed subsets of $X$, there is a point $x \in X$ for which $\bigcap_{n=1}^{\infty} F_{n}=\{x\}$}
 \boxset{The Cauchy Convergence Criterion}
 {If $(X, d)$ has the property that each Cauchy sequence has a limit in $X$ then $(X, d)$ is complete.}
 \boxset{The Intermediate Value Theorem}
@@ -208,7 +208,7 @@ where
 {If $f: G \rightarrow \C$ is an analytic function and $\gamma$ is a closed rectifiable curve in $G$ such that $\gamma \sim 0$, then
 \[\int_{\gamma} f=0 \text {. }\]}
 \boxset{Cauchy's Theorem (Fourth Version)}
-{If $G$ is simply connected then i $f=0$ for every closed rectifiable curve and every analytic function $f$.}
+{If $G$ is simply connected then  $\int_\gamma f=0$ for every closed rectifiable curve and every analytic function $f$.}
 \boxset{Open Mapping Theorem}
 {Let $G$ be a region and suppose that $f$ is a non constant analytic function on $G$. Then for any open set $U$ in $G, f(U)$ is open.}
 \boxset{Goursat's Theorem}
@@ -221,14 +221,14 @@ where the convergence is absolute and uniform over ann $\left(a ; r_{1}, r_{2}\r
 where $\gamma$ is the circle $|z-a|=r$ for any $r, R_{1}<r<R_{2}$. Moreover, this series is unique.
 }
 \boxset{Residue Theorem}
-{Let $f$ be analytic in the region $G$ except for the isolated singularities $a_{1}, a_{2}, \ldots, a_{m}$. If $\gamma$ is a closed rectifiable curve in $G$ which does not pass through any of the points $a_{k}$ and if $\gamma \approx 0$ in $G$ then
+{Let $f$ be analytic in the region $G$ except for the isolated singularities \\ $a_{1}, a_{2}, \ldots, a_{m}$. If $\gamma$ is a closed rectifiable curve in $G$ which does not pass through any of the points $a_{k}$ and if $\gamma \approx 0$ in $G$ then
 \[\frac{1}{2 \pi i} \int_{\gamma} f=\sum_{k=1}^{m} n\left(\gamma ; a_{k}\right) \operatorname{Res}\left(f ; a_{k}\right) \text {. }\]}
 \boxset{The Argument Principle}
 {Let $f$ be meromorphic in $G$ with poles $p_{1}, p_{2}, \ldots, p_{m}$ and zeros $z_{1}, z_{2}, \ldots, z_{n}$ counted according to multiplicity. If $\gamma$ is a closed rectifiable curve in $G$ with $\gamma \approx 0$ and not passing through $p_{1}, \ldots, p_{m}$; $z_{1}, \ldots, z_{n}$; then
 \[\frac{1}{2 \pi i} \int_{\gamma} \frac{f^{\prime}(z)}{f(z)} d z=\sum_{k=1}^{n} n\left(\gamma ; z_{k}\right)-\sum_{j=1}^{m} n\left(\gamma ; p_{j}\right) .\]
 }
 \boxset{Rouché's Theorem}
-{ Suppose $f$ and $g$ are meromorphic in a neighborhood of $\bar{B}(a ; R)$ with no zeros or poles on the circle $\gamma=\{z:|z-a|=R\} .$ If $Z_{f}, Z_{g}$ $\left(P_{f}, P_{g}\right)$ are the number of zeros ( poles) of $f$ and $g$ inside $\gamma$ counted according to their multiplicities and if
+{ Suppose $f$ and $g$ are meromorphic in a neighborhood of $\bar{B}(a ; R)$ with no zeros or poles on the circle $\gamma=\{z:|z-a|=R\} .$ If $Z_{f}, Z_{g}$ $\left(P_{f}, P_{g}\right)$ are the number of zeros (poles) of $f$ and $g$ inside $\gamma$ counted according to their multiplicities and if
 \[|f(z)+g(z)|<|f(z)|+|g(z)|\]
 on $\gamma$, then
 \[Z_{f}-P_{f}=Z_{g}-P_{g} .\]}
@@ -242,7 +242,7 @@ on $\gamma$, then
 \boxset{Cauchy sequence}
 { A sequence $\left\{x_{n}\right\}$ is called a Cauchy sequence if for every $\epsilon>0$ there is an integer $N$ such that $d\left(x_{n}, x_{m}\right)<\epsilon$ for all $n, m \geq N$.}
 \boxset{Uniform convergence}
-{Let $X$ be a set and $(\Omega, \rho)$ a metric space and suppose $f, f_{1}, f_{2}, \ldots$ are functions from $X$ into $\Omega$. The sequence $\left\{f_{n}\right\}$ converges uniformly to $f$-written $f=u-\lim f_{n}$-if for every $\epsilon>0$ there is an integer $N$ (depending on $\epsilon$ alone) such that $\rho\left(f(x), f_{n}(x)\right)<\epsilon$ for all $x$ in $X$, whenever $n \geq N$. Hence, whenever $n \geq N$.}
+{Let $X$ be a set and $(\Omega, \rho)$ a metric space and suppose $f, f_{1}, f_{2}, \ldots$ are functions from $X$ into $\Omega$. The sequence $\left\{f_{n}\right\}$ converges uniformly to $f$-written $f=u-\lim f_{n}$-if for every $\epsilon>0$ there is an integer $N$ (depending on $\epsilon$ alone) such that $\rho\left(f(x), f_{n}(x)\right)<\epsilon$ for all $x$ in $X$, whenever $n \geq N$.}
 \boxset{Analytic function}
 { A function $f: G \rightarrow \C$ is analytic if $f$ is continuously differentiable on $G$.}
 \boxset{Principal branch of the logarithm}
@@ -267,7 +267,7 @@ This number $I$ is called the integral of $f$ with respect to $\gamma$ over $[a,
 \boxset{Liouville's Theorem}
 { If $f$ is a bounded entire function then $f$ is constant.}
 \boxset{Fundamental Theorem of Algebra}
-{ If $p(z)$ is a non constant polynomial then there is a complex number a with $p(a)=0$.}
+{ If $p(z)$ is a non constant polynomial then there is a complex number $a$ with $p(a)=0$.}
 \boxset{Maximum Modulus Theorem}
 { If $G$ is a region and $f: G \rightarrow \C$ is an analytic function such that there is a point $a$ in $G$ with $|f(a)| \geq|f(z)|$ for all $z$ in $G$, then $f$ is constant.}
 \boxset{Index of a closed rectifiable curve $\gamma$ in $\C$ with respect to a point $a \notin \gamma$}
