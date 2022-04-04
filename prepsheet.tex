@@ -105,6 +105,9 @@
 \newcommand{\Tv}{\text{Tv}}
 \newcommand{\V}{\text{V}}
 \newcommand{\Ip}[1]{\text{Im}#1}
+\newcommand{\LP}{\left(}
+\newcommand{\RP}{\right)}
+\newcommand{\LS}{\left\lbrace}
 \newcommand{\RS}{\right\rbrace}
 \newcommand{\LB}{\left[}
 \newcommand{\RB}{\right]}
@@ -177,10 +180,12 @@ where $0\leq k \leq n-1$
 }
 \boxset{Lines in $\C$}
 {A line in $\C$ is of the form
+\[L=\LS z=a+tb\MM -\infty<t<\infty\RS \]
+for $a,b\in\C$ or
 \[L=\left\{z: \operatorname{Im}\left(\frac{z-a}{b}\right)=0\right\}\]
 }
 \boxset{Half planes in $\C$}
-{We are "walking along $L$ in the direction of $b$." If we put
+{For $a,b\in\C$W e are "walking along $L$ in the direction of $b$." If we put
 \[H_{a}=\left\{z: \operatorname{Im}\left(\frac{z-a}{b}\right)>0\right\}\]
 then it is easy to see that $H_{a}=a+H_{0} \equiv\left\{a+w: w \in H_{0}\right\}$; that is, $H_{a}$ is the translation of $H_{0}$ by $a$. Hence, $H_{a}$ is the half plane lying to the left of $L$. Similarly,
 \[K_{a}=\left\{z: \operatorname{Im}\left(\frac{z-a}{b}\right)<0\right\}\]
@@ -256,6 +261,7 @@ We designate the particular branch of the logarithm defined above on $\C-\{z: z 
 { Let $\Gamma_{1}$ and $\Gamma_{2}$ be two circles in $\C_{\infty}$ and let $T$ be a Möbius transformation such that $T\left(\Gamma_{1}\right)=\Gamma_{2}$. Let $\left(z_{1}, z_{2}, z_{3}\right)$ be an orientation for $\Gamma_{1}$. Then $T$ takes the right side and the left side of $\Gamma_{1}$ onto the right side and left side of $\Gamma_{2}$ with respect to the orientation $\left(T z_{1}, T z_{2}, T z_{3}\right)$.}
 \boxset{Riemann-Stieltjes integral}
 { Let $\gamma:[a, b] \rightarrow \C$ be of bounded variation and suppose that $f:[a, b] \rightarrow \C$ is continuous. Then there is a complex number I such that for every $\epsilon>0$ there is a $\delta>0$ such that when $P=\left\{t_{0}<t_{1}<\ldots<t_{m}\right\}$ is a partition of $[a, b]$ with $\|P\|=\max \left\{\left(t_{k}-t_{k-1}\right): 1 \leq k \leq m\right\}<\delta$ then
+\[\abs{I-\sum_{k=1}^m f\LP\tau_k\RP\LB\gamma\LP t_k\RP-\LP t_{k-1}\RP\RB}<\varepsilon\]
 for whatever choice of points $\tau_{k}, t_{k-1} \leq \tau_{k} \leq t_{k}$.
 This number $I$ is called the integral of $f$ with respect to $\gamma$ over $[a, b]$ and is designated by
 \[I=\int_{a}^{b} f d \gamma=\int_{a}^{b} f(t) d \gamma(t) .\]
