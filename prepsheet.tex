@@ -289,4 +289,10 @@ is called the index of $\gamma$ with respect to the point $a$. It is also someti
 { A function $f$ has an isolated singularity at $z=a$ if there is an $R>0$ such that $f$ is defined and analytic in $B(a ; R)-\{a\}$ but not in $B(a ; R)$. The point $a$ is called a removable singularity if there is an analytic function $g: B(a ; R) \rightarrow \C$ such that $g(z)=f(z)$ for $0<|z-a|<R$.}
 \boxset{Pole of a function}
 {If $z=a$ is an isolated singularity of $f$ then $a$ is a pole of $f$ if $\lim _{z \rightarrow a}|f(z)|=\infty$. That is, for any $M>0$ there is a number $\epsilon>0$ such that $|f(z)| \geq M$ whenever $0<|z-a|<\epsilon$. If an isolated singularity is neither a pole nor a removable singularity it is called an essential singularity.}
+\boxset{Cauchy's Integral Formula (First Version)}
+{Let $G$ be an open subset of the plane and $f: G \rightarrow \mathbb{C}$ an analytic function. If $\gamma$ is a closed rectifiable curve in $G$ such that $n(\gamma ; w)=0$ for all $w$ in $\mathbb{C}-G$, then for $a$ in $G-\{\gamma\}$
+\[n(\gamma ; a) f(a)=\frac{1}{2 \pi i} \int_{\gamma} \frac{f(z)}{z-a} d z .\]}
+\boxset{Cauchy's Integral Formula (Second Version)}
+{Let $G$ be an open subset of the plane and $f: G \rightarrow \mathbb{C}$ an analytic function. If $\gamma_{1}, \ldots, \gamma_{m}$ are closed rectifiable curves in $G$ such that $n\left(\gamma_{1} ; w\right)+\cdots+n\left(\gamma_{m} ; w\right)=0$ for all $w$ in $\mathbb{C}-G$, then for a in $G-\cup_{k=1}^{m}\left\{\gamma_{k}\right\}$
+\[f(a) \sum_{k=1}^{m} n\left(\gamma_{k} ; a\right)=\sum_{k=1}^{m} \frac{1}{2 \pi i} \int_{\gamma_{k}} \frac{f(z)}{z-a} d z .\]}
 \end{document}
