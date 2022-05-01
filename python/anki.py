@@ -87,7 +87,7 @@ def_deck = genanki.Deck(
 def_deck.add_model(def_model)
 
 
-reg = r"\\boxset\{(.*)?\}\n\{([\w\W]*?)\}\n"
+reg = r"\\boxset\{(.*?)\}\n\{([\w\W]*?)\}\n"
 
 with open("prepsheet.tex") as file:
 
