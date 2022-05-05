@@ -83,7 +83,7 @@
 \newcommand{\notsubset}{\not\subset}
 % \newcommand{\right)}{\mathbb{R}^{+}}
 \newcommand{\Dn}{\Delta^{n}}
-\newcommand{\C}{\mathbb{C}}
+\renewcommand{\C}{\mathbb{C}}
 \newcommand{\primeDec}{p_1^{\alpha_1}p_2^{\alpha_2}\cdots p_m^{\alpha_m}p_{m+1}^{\alpha_{m+1}}}
 \newcommand{\abs}[1]{\left\vert#1\right\vert}
 \newcommand{\norm}[1]{\left\vert\left\vert#1\right\vert\right\vert}
@@ -136,9 +136,9 @@
 % --------------------------------------------------------------
 %                         Renew Commands
 % --------------------------------------------------------------
-\renewcommand{\det}[1]{\text{det}\left(#1\right)}
+% \renewcommand{\det}[1]{\text{det}\left(#1\right)}
 \renewcommand{\bar}[1]{\overline{#1}}
-\renewcommand{\cos}[1]{\text{cos}\left(#1\right)}
+% \renewcommand{\cos}[1]{\text{cos}\left(#1\right)}
 
 \newcommand{\boxset}[2]{\begin{mdframed}[style=darkQuesion]
 #1
@@ -205,7 +205,7 @@
 \boxset{The Argument Principle }
 {Let $f$ be meromorphic in $G$ with poles $p_{1}, p_{2}, \ldots, p_{m}$ and zeros $z_{1}, z_{2}, \ldots, z_{n}$ counted according to multiplicity. If $\gamma$ is a closed rectifiable curve in $G$ with $\gamma \approx 0$ and not passing through $p_{1}, \ldots, p_{m}$; $z_{1}, \ldots, z_{n}$; then \[\frac{1}{2 \pi i} \int_{\gamma} \frac{f^{\prime}(z)}{f(z)} d z=\sum_{k=1}^{n} n\left(\gamma ; z_{k}\right)-\sum_{j=1}^{m} n\left(\gamma ; p_{j}\right) .\] }
 \boxset{Rouché's Theorem }
-{ Suppose $f$ and $g$ are meromorphic in a neighborhood of $\bar{B}(a ; R)$ with no zeros or poles on the circle $\gamma=\{z:|z-a|=R\} .$ If $Z_{f}, Z_{g}$ $\left(P_{f}, P_{g}\right)$ are the number of zeros (poles) of $f$ and $g$ inside $\gamma$ counted according to their multiplicities and if \[|f(z)+g(z)|<|f(z)|+|g(z)|\] on $\gamma$, then \[Z_{f}-P_{f}=Z_{g}-P_{g} .\]}  % % d
+{ Suppose $f$ and $g$ are meromorphic in a neighborhood of $\bar{B}(a ; R)$ with no zeros or poles on the circle $\gamma=\{z:|z-a|=R\} .$ If $Z_{f}, Z_{g}$ $\left(P_{f}, P_{g}\right)$ are the number of zeros (poles) of $f$ and $g$ inside $\gamma$ counted according to their multiplicities and if \[|f(z)+g(z)|<|f(z)|+|g(z)|\] on $\gamma$, then \[Z_{f}-P_{f}=Z_{g}-P_{g} .\]}
 \boxset{Schwarz's Lemma}
 {Let $D=\{z:|z|<1\}$ and Suppose $f$ is analytic on $D$ with\[\ \](a) $|f(z)| \leq 1$ for $z$ in $D$,\[\ \](b) $f(0)=0$.\[\ \]Then $\left|f^{\prime}(0)\right| \leq 1$ and $|f(z)| \leq|z|$ for all $z$ in the disk D. Moreover if $\left|f^{\prime}(0)\right|=1$ or if $|f(z)|=|z|$ for some $z \neq 0$ then there is a constant $c,|c|=1$, such that $f(w)=c w$ for all $w$ in $D$.}
 \boxset{The Arzelà-Ascoli Theorem}
@@ -300,4 +300,12 @@
 {A set $\mathscr{F} \subset C(G, \Omega)$ is equicontinuous at a point $z_{0}$ in $G$ iff for every $\epsilon>0$ there is a $\delta>0$ such that for $\left|z-z_{0}\right|<\delta$,\[d\left(f(z), f\left(z_{0}\right)\right)<\epsilon\]for every $f$ in $\mathscr{F} . \mathscr{F}$ is equicontinuous over a set $E \subset G$ if for every $\epsilon>0$ there is a $\delta>0$ such that for $z$ and $z^{\prime}$ in $E$ and $\left|z-z^{\prime}\right|<\delta$,\[d\left(f(z), f\left(z^{\prime}\right)\right)<\epsilon\]}
 \boxset{normal}
 {A set $\mathscr{F} \subset C(G, \Omega)$ is normal if each sequence in $\mathscr{F}$ has a subsequence which converges to a function $f$ in $C(G, \Omega)$.}
+\boxset{Series representation for $e^z$}
+{\[\sum_{k=0}^{\infty} \frac{z^{k}}{k !}\]}
+\boxset{Series representation for $\log(z)$}
+{\[\sum_{k=1}^{\infty}(-1)^{k+1} \frac{(z-1)^{k}}{k}\]}
+\boxset{Series representation for $\sin(z)$}
+{\[\sum_{n=0}^{\infty} \frac{(-1)^{n}}{(2 n+1) !} z^{2 n+1}\]}
+\boxset{Series representation for $\cos(z)$}
+{\[\sum_{n=0}^{\infty} \frac{(-1)^{n}}{(2 n) !} z^{2 n}\]}
 \end{document}
