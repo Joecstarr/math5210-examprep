@@ -100,6 +100,8 @@ with open("prepsheet.tex") as file:
     my_note = genanki.Note(
               model=def_model,
               fields=[name, defintion],
-              guid=f"prepsheet.tex-{name}")
+              guid=f"prepsheet.tex-{name}",
+              tags=["def","5210"]
+              )
     def_deck.add_note(my_note)
   genanki.Package(def_deck).write_to_file('prepsheet.apkg')
